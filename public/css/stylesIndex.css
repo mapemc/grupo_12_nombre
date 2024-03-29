@@ -204,7 +204,7 @@
 
 /*tarjetas*/
 .tarjetas
-    {background-image: linear-gradient(to bottom, transparent, lightblue, transparent);;
+    {background-image: linear-gradient(to bottom, transparent, lightblue, transparent);
     padding: 20px;}
 
 .tarjetas h3
@@ -223,16 +223,20 @@
     justify-content: space-around; 
     padding: 20px;} 
 
-/* Estilos de Cada Tarjeta */ 
+/* Estilos de Cada Tarjeta */
 .card
     {display: flex;
-    justify-content: center; 
-    text-align: center; 
-    flex: 1; 
-    margin: 10px;  
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background-color: #F8F8F8;}
+    background-color: #F8F8F8;
+    max-width: 300px;
+    width: 100%; 
+    padding: 10px;}
+
 
 /* Estilos del Contenido de la Tarjeta */
 .card-content
@@ -250,6 +254,12 @@
     height: auto;
     object-fit: cover;
     border-radius: 10px 10px 0 0;}
+
+.button-link
+    {display: flex;
+    justify-content: center; /* Para centrar los elementos horizontalmente */
+    align-items: flex-end; /* Para alinear los elementos en la parte inferior */
+    margin-top: auto; /* Hace que los botones se alineen en la parte inferior */}
 
 .button-link h3
     {display: inline-block; 
