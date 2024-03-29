@@ -190,16 +190,16 @@
     flex-direction: column;
     margin-top: 10px;
     border-top: solid 1px #F8F8F8;
-    color: #333;}
+    color: #34322F;}
 
 .name-product-searched, .category-product-searched
-    {color: #333;
+    {color: #34322F;
     font-size: 12px;}
 
 .price-product-searched
     {margin-top: 16px;
     padding: 0;
-    color: #333;
+    color: #34322F;
     font-size: 13px;}
 
 /*tarjetas*/
@@ -209,12 +209,14 @@
 
 .tarjetas h3
     {margin-top: 10px;
-    margin-bottom: 5px;}
+    margin-bottom: 5px;
+    color: #34322F;}
 
 /* estilos container general*/ 
 .card p
     {font-size: 1.1em;
-    text-align: justify;}
+    text-align: justify;
+    color: #34322F;}
 
 /* Estilos del Contenedor de Tarjetas */
 .cards-container
@@ -247,7 +249,8 @@
     {margin-top: 0;
     font-size: 1.5em;
     justify-content: center;
-    text-align: center;} 
+    text-align: center;
+    color: #34322F;} 
 
 .card img
     {width: 100%;
