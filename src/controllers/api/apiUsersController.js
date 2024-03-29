@@ -11,7 +11,8 @@ const apiUsersController = {
     
             const users = await User.findAndCountAll({ limit, offset });
             const userList = users.rows.map(user => ({
-                detail: `/api/users/${user.id}`,
+                detail: `/api/users/${user.username}`,
+                id: user.id,
                 username: user.username,
                 name: user.name,
                 email: user.email,

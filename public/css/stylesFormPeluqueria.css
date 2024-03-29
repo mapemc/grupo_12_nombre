@@ -1,18 +1,18 @@
-.encabezado-catalogo{
+.encabezado-catalogo-peluqueria{
     position: relative;
     background-color: #ebebeb;
     padding-bottom: 15px;
     z-index: -2;
 }
 
-.img-catalogo{
+.img-catalogo-peluqueria{
     width: 98vw;
     height: auto;
     position: relative;
     z-index: -1;
 }
 
-.text-overlay{
+.text-overlay-peluqueria{
     text-align: center;
     color: rgb(31 83 74);
     position: absolute;
@@ -23,7 +23,7 @@
     font-family: 'Rubik';
 }
 
-.texto-contacto{
+.texto-contacto-peluqueria{
     margin: 10px;
     margin-bottom: 57px;
     background-color: rgb(17 153 158 / 10%);
@@ -37,27 +37,27 @@
     font-size: 1.2rem;
 }
 
-.contenedor-form{
+.contenedor-form-peluqueria{
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.estilos-form{
+.estilos-form-peluqueria{
     background-color: #ebebeb;
     display: flex;
     flex-direction: column;
     padding: 90px;
 }
 
-.estilos-labels{
+.estilos-labels-peluqueria{
     padding: 10px;
     font-family: 'Rubik';
     font-size: 1.2rem;
 }
 
-.estilos-inputs{
+.estilos-inputs-peluqueria{
     padding: 10px;
     width: 50vw;
     height: 33px;
@@ -66,7 +66,7 @@
     border: 1px solid #ddd;
 }
 
-button{
+.boton-peluqueria{
     display: block;
     width: 25vw;
     padding: 10px;
@@ -80,13 +80,13 @@ button{
     margin-top: 15px;
 }
 
-.contenedor-texto-contacto{
+.contenedor-texto-contacto-peluqueria{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.texto-contacto{
+.texto-contacto-peluqueria{
     margin: 10px;
     margin-bottom: 57px;
     background-color: rgb(17 153 158 / 10%);
@@ -100,12 +100,12 @@ button{
     font-size: 1.2rem;
 }
 
-.contenedor-imagen {
+.contenedor-imagen-peluqueria {
     position: relative;
     display: inline-block;
   }
 
-.text-overlay-2{
+.text-overlay-2-peluqueria{
     position: absolute;
     top: 50%;
     left: 33%;
@@ -116,6 +116,6 @@ button{
     width: 58%;
 }
 
-.contenedor-texto-descripcion{
+.contenedor-texto-descripcion-peluqueria{
     display: flex;
 }

@@ -1,18 +1,18 @@
-.encabezado-catalogo{
+.encabezado-catalogo-guarderia{
     position: relative;
     background-color: #ebebeb;
     padding-bottom: 15px;
     z-index: -2;
 }
 
-.img-catalogo{
+.img-catalogo-guarderia{
     width: 98vw;
     height: auto;
     position: relative;
     z-index: -1;
 }
 
-.text-overlay{
+.text-overlay-guarderia{
     text-align: center;
     color: rgb(31 83 74);
     position: absolute;
@@ -23,27 +23,27 @@
     font-family: 'Rubik';
 }
 
-.contenedor-form{
+.contenedor-form-guarderia{
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.estilos-form{
+.estilos-form-guarderia{
     background-color: #ebebeb;
     display: flex;
     flex-direction: column;
     padding: 90px;
 }
 
-.estilos-labels{
+.estilos-labels-guarderia{
     padding: 10px;
     font-family: 'Rubik';
     font-size: 1.2rem;
 }
 
-.estilos-inputs{
+.estilos-inputs-guarderia{
     padding: 10px;
     width: 50vw;
     height: 33px;
@@ -52,7 +52,7 @@
     border: 1px solid #ddd;
 }
 
-button{
+.boton-guarderia{
     display: block;
     width: 25vw;
     padding: 10px;
@@ -66,13 +66,13 @@ button{
     margin-top: 15px;
 }
 
-.contenedor-texto-contacto{
+.contenedor-texto-contacto-guarderia{
     /* display: flex; */
     justify-content: space-around;
     align-items: center;
 }
 
-.texto-contacto{
+.texto-contacto-guarderia{
     margin: 10px;
     margin-bottom: 57px;
     background-color: rgb(17 153 158 / 10%);
