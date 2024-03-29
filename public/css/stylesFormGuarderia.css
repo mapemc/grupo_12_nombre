@@ -76,7 +76,7 @@ button{
     margin: 10px;
     margin-bottom: 57px;
     background-color: rgb(17 153 158 / 10%);
-    width: 95vw;
+    /* width: 95vw; */
     padding: 26px;
     padding-left: 72px;
     text-align: justify;
