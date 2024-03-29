@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include("./partials/head.ejs", {cssSheet:"styleHome", title:"Home"}) %>
+    <%- include("./partials/head.ejs", {cssSheet:"stylesIndex", title:"Home"}) %>
 </head>
 
 <body>
@@ -16,10 +16,9 @@
         <input id="slide-0" name="carrousel" type="radio" checked/>
         <div class="slide">
           <label for="slide-3" class="back">◀</label>
-          <div class="slide-content">
-                <img src="./img/indexImgs/adopcion.gif">
+            <div class="slide-content">
+                <img src="./img/indexImgs/huellitapp.png">
             </div>
-          </div>
           <label for="slide-1" class="forward">▶</label>
         </div>
         
@@ -41,8 +40,138 @@
           <label for="slide-3" class="forward">▶</label>
         </div> 
     </section>
+    
+    <section class = categories-login>
+        <section class="animals">
+            <a href="http://localhost:3456/search?query=erro">
+                <div class="icon-home"><i class="fa fa-solid fa-dog"></i></div>
+            </a>                    
+            <a href="http://localhost:3456/search?query=ato">
+                <div class="icon-home"><i class="fa fa-solid fa-cat"></i></div>
+            </a>
+            <a href="http://localhost:3456/search?query=ez">
+                <div class="icon-home"><i class="fa fa-solid fa-fish"></i></div>
+            </a>
+            <a href="http://localhost:3456/search?query=ave">
+                <div class="icon-home"><i class="fa fa-solid fa-crow"></i></div>
+            </a>
+            <a href="http://localhost:3456/products/insale">
+                <div class="icon-home"><i class="fa fa-solid fa-percent"></i></div>
+            </a>
+        </section>
+        <section class="animals-name">
+            <div class="icon-name">Perros</div>
+            <div class="icon-name">Gatos</div>
+            <div class="icon-name">Peces</div>
+            <div class="icon-name">Aves</div>
+            <div class="icon-name">Descuentos</div>
+        </section>
+    </section>
+
+    <section class = "banner-index-middle">
+        <img src = "./img/banners/banner_esterilizacion.png">
+    </section>
+
+    <section class="star-products">
+        <h3>Basados en tu última búsqueda <%= ultimoTerminoBusqueda %></h3>
+        <div class="row-searched">
+            <% products_index.forEach(product => { %>
+                <a href="/products/detail/<%= product.id %>" class="box-searched">
+                    <div class="product-box_image-searched">
+                        <img class="product-searched-img" src="/img/<%= product.photo %>" alt="imagen de producto">
+                    </div>
+                    <article class="product-box_data-searched">
+                        <h2 class="price-product-searched">$ <%= product.price %></h2>
+                        <h2 class="name-product-searched"><%= product.name %></h2>
+                        <h5 class="category-product-searched">Categoria: <%= product.category %></h5>
+                    </article>
+                </a>
+            <% }); %>
+        </div>
+    </section>
+
+    <section class = "tarjetas">
+        <h3>Servicios</h3>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-content">
+                        <img src="./img/card1.jpeg" alt="">
+                        <h2>Veterinarios</h2>
+                        <p>Nuestro equipo de veterinarios certificados y apasionados por los animales
+                            está aquí para ofrecerte los mejores cuidados médicos para tu mascota.
+                        </p>
+                        <a href="/services/services/veterinaria" class="button-link">
+                            <h3>Sacá tu turno</h3>
+                        </a>   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="./img/card8.jpeg" alt="">
+                        <h2>Guarderia</h2>
+                        <p>Nuestra guardería para mascotas es el segundo hogar perfecto para tu compañero.
+                            Instalaciones de primera clase,
+                            supervisión profesional las 24 horas.</p>
+                        <a href="/services/services/guarderia" class="button-link">
+                            <h3>Reservas aquí</h3>
+                        </a>   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="./img/peluqueria3.jpeg" alt="">
+                        <h2>Peluqueria</h2>
+                        <p>Nuestros estilistas profesionales
+                            utilizan técnicas suaves y productos de la mejor calidad,
+                            asegurando un resultado perfecto y una mascota feliz.</p>
+                        <a href="/services/services/peluqueria" class="button-link">
+                            <h3>Sacá turno aquí</h3>
+                        </a>   
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class = "brands">
+        <h3>Trabajamos con las mejores marcas del mercado</h3>
+        <div class="brands-box">
+            <div class="logos">
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/whiskas.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/catchow.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/dogchow.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/eukanuba.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/nutrique.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/pedigree.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/proplan.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/royalcanin.png">
+                </a>
+                <a href="#" class="logo-icon">
+                    <img src="./img/indexImgs/vitalcan.png">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
               
-    <section>
+    <!-- <section>
             <div class="cards-container">
                 <div class="card">
                     <div class="card-content">
@@ -116,7 +245,7 @@
                 
             </div>
             
-        </section>
+        </section> -->
     </main>
     <footer>
         <%- include('partials/footer.ejs') %>
