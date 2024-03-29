@@ -52,13 +52,13 @@
     align-items: center;
     justify-content: center;}
 
-.slide-content img
+.slide-content img[src$="app.png"]
     {width: 100%;
     height: 100%;
     object-fit:contain;}
 
 .slide-content img[src$=".gif"]
-    {width: 100%;
+    {width: 200%;
     height: 100%;}
 
 .back, .forward
