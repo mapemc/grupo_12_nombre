@@ -40,7 +40,7 @@ main
 .inputStyle
     {width: 90%;
     padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: 1px solid #8888888f;
     font-size: 12px;
     text-transform: uppercase;}
@@ -222,10 +222,10 @@ input:invalid + .error-message
 
 .iconoForm{
     position: absolute;
-    right: 10px;
-    bottom: 15px;
+    right: 20px;
+    bottom: 6px;
     z-index: 100;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 16px;
     opacity: 0;
 }
@@ -282,4 +282,16 @@ input:invalid + .error-message
     text-transform: none;
     padding: unset;
     margin: 5px;
+}
+
+.aviso1-activo{
+    color: #bb2929;
+    padding: 3px;
+    font-size: 15px;
+}
+.aviso2-activo{
+    color: #bb2929;
+    padding: 3px;
+    font-size: 15px;
+    margin-bottom: 12px;
 }

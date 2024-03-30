@@ -1,4 +1,5 @@
 const {check} = require('express-validator');
+const path = require('path');
 
 const validationsEditProfile = [
     check('password')
@@ -14,7 +15,20 @@ const validationsEditProfile = [
                 throw new Error('Las contraseñas no coinciden');
             }
             return true;
-        })
+        }),
+    check('avatar')
+    .custom((value, { req }) => {
+        if (!req.file) {
+            throw new Error('Sube una imagen');
+        } else {
+            const fileExtension = path.extname(req.file.originalname).toLowerCase();
+            const acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Formatos de imagen permitidos: ${acceptedExtensions.join(', ')}`);
+            }
+        }
+        return true;
+    })
 ];
 
 module.exports = validationsEditProfile

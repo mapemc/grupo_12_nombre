@@ -20,7 +20,7 @@
             
             <div class = "name-description">
                 <!--CAMPO NOMBRE-->
-                <label for = "name" class = "form-label">Nombre</label>
+                <label for = "name" class = "form-label-name">Nombre</label>
                     <input 
                     type = "text" 
                     name = "name" 
@@ -78,6 +78,13 @@
                     class = "form-input"
                     value="<%= locals.oldData ? oldData.price : null %>"
                     >
+                     <!-- ----------VALIDACION PRECIOS --------------------------->
+                
+                        <% if (locals.errors && errors.price) {%>
+                            <div class = "errors">
+                                <%= errors.price.msg%>
+                            </div>
+                        <% } %>
 
                 <label for = "stock" class = "form-label">Stock</label>
                 <!--CAMPO STOCK-->
@@ -89,21 +96,16 @@
                     class = "form-input"
                     value="<%= locals.oldData ? oldData.stock : null %>"
                     >
-            </div>           
-                 <!-- ----------VALIDACION PRECIOS --------------------------->
-                
-                <% if (locals.errors && errors.price) {%>
-                    <div class = "errors">
-                        <%= errors.price.msg%>
-                    </div>
-                <% } %>
-            <!-- ------------VALIDACION STOCK ------------------------------>
-                <% if (locals.errors && errors.stock) {%>
-                    <div class = "errors">
-                        <%= errors.stock.msg%>
-                    </div>
-                <% } %>
+                    <!-- ------------VALIDACION STOCK ------------------------------>
+                        <% if (locals.errors && errors.stock) {%>
+                            <div class = "errors">
+                                <%= errors.stock.msg%>
+                            </div>
+                        <% } %>
 
+            </div>           
+                
+            
             <div class = "category">
                 <!--CAMPO CATEGORIA-->
                 <label for = "category" class = "form-label">Categoría</label>
@@ -160,6 +162,9 @@
     </footer>
 
     <script src="/js/newProductValidation.js"></script>
+    <script src="/js/scrollupEditProduct.js"></script>
+    <script src="/js/scrollupNewProduct.js"></script>
+
 
 </body>	
 </html>

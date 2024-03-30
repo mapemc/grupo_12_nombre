@@ -1,8 +1,8 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
-console.log(formulario);
-console.log(inputs);
+//console.log(formulario);
+//console.log(inputs);
 
 const expresiones = {
 	password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/,

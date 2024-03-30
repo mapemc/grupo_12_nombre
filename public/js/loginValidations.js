@@ -29,31 +29,31 @@ window.addEventListener("load", () => {
         emailInput.addEventListener('blur', () => {
         const email = emailInput.value;
 
-        // Realizar una solicitud AJAX al servidor para verificar si el correo electrónico ya existe
-        fetch(`/check-email?email=${email}`)
-            .then((response) => response.json())
-            .then((data) => {
-            if (data.exists) {
-                emailError.textContent = 'El correo electrónico ya está registrado';
-            } else {
-                emailError.textContent = '';
-            }
-            })
-            .catch((error) => {
-            console.error('Error al verificar el correo electrónico:', error);
-            emailError.textContent = 'Error al verificar el correo electrónico';
-            });
-        });
+                        // Realizar una solicitud AJAX al servidor para verificar si el correo electrónico ya existe
+                        /* fetch(`/check-email?email=${email}`)
+                            .then((response) => response.json())
+                            .then((data) => {
+                            if (data.exists) {
+                                emailError.textContent = 'El correo electrónico ya está registrado';
+                            } else {
+                                emailError.textContent = '';
+                            }
+                            })
+                            .catch((error) => {
+                            console.error('Error al verificar el correo electrónico:', error);
+                            emailError.textContent = 'Error al verificar el correo electrónico';
+                            });
+                        }); */
 
 
 
         ////contrasenia///////
-        let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
+        //let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
         if (form.password.value == "") {
             errorsList.push("La contraseña no debe estar vacia");
-        } else if (!passwordPattern.test(form.password.value)) {
+        } /* else if (!passwordPattern.test(form.password.value)) {
             errorsList.push("La contraseña debe tener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial");
-        }
+        } */
 
         //const emailInput = document.querySelector('#email');
         const passwordInput = document.querySelector('#password');
@@ -96,4 +96,4 @@ window.addEventListener("load", () => {
 
     })
 })
-    
+})

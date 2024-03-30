@@ -21,17 +21,17 @@
             <!--Campo name-->
             <div class = "name-description">
                  <!--CAMPO NOMBRE-->
-                <label for= "name" class= "form-label">Nombre</label>
+                <label for= "name" class= "form-label-name">Nombre</label>
                
                     <input 
                     type ="text" 
                     name = "name" 
                     id = "name" 
-                    class = "form-input <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
+                    class = "form-input <%= locals.errors && errors.name ? 'is-invalid' : null %>"
                     value="<%= locals.oldData ? oldData.name : product.name %>">
                     <!--Validación name-->
                         <% if (locals.errors && errors.name) {%>
-                            <div class = "errors alert-warning">
+                            <div class = "alert-warning">
                                 <%= errors.name.msg%>
                             </div>
                         <% } %>
@@ -39,9 +39,9 @@
                   <!--CAMPO DESCRIPCION-->  
                 <label for = "description">Descripción</label>
                 
-                    <textarea name="description" id="description" class="form-input <%= locals.errors && errors.description ? 'is-invalid' : null %>"><%= locals.oldData ? oldData.description : product.description %></textarea>
+                    <textarea name="description" id="description" class="form-input <%= locals.errors && errors.description ? 'is-invalid' : null %>" style="width: auto; height: 157px; margin-right: 16px;"><%= locals.oldData ? oldData.description : product.description %></textarea>
                         <% if (locals.errors && errors.description) {%>
-                            <div class= "errors alert-warning">
+                            <div class= "alert-warning">
                                 <%= errors.description.msg%>
                             </div>
                         <% } %>  
@@ -58,7 +58,7 @@
                     value="<%= locals.oldData ? oldData.photo : "" %>">
                 
                         <% if (locals.errors && errors.photo) { %>
-                            <div class="errors alert-warning">
+                            <div class="alert-warning">
                                 <%= errors.photo.msg %>
                             </div>
                         <% } %>
@@ -67,11 +67,16 @@
            <!--  campo price -->
             <div class = "price-stock">
                 <label for= "price" class= "form-label">Precio</label>
-                    <input type= "number" step= 0.01 min= 0 name= "price" id= "price" 
+                    <input type= "number" 
+                    step= 0.01 
+                    min= 0 
+                    name= "price" 
+                    id= "price" 
                     class= "form-input <%= locals.errors && errors.price ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.price : product.price %>">
+
                         <% if (locals.errors && errors.price) { %>
-                            <div class="errors alert-warning">
+                            <div class="alert-warning">
                                 <%= errors.price.msg %>
                             </div>
                         <% } %> 
@@ -79,11 +84,15 @@
            
                 <!--  campo stock   -->      
                 <label for= "stock" class= "form-label">Stock</label>
-                    <input type= "number" min= 0 name= "stock" id= "stock" 
+                    <input type= "number" 
+                    min= 0 
+                    name= "stock" 
+                    id= "stock" 
                     class= "form-input <%= locals.errors && errors.stock ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.stock : product.stock %>">
+
                         <% if (locals.errors && errors.stock) { %>
-                            <div class="errors alert-warning">
+                            <div class="alert-warning">
                                 <%= errors.stock.msg %>
                             </div>
                         <% } %> 
@@ -106,16 +115,18 @@
                         <%= category %> </option>
                     <% }  %> 
                 </select>
-                <% if(locals.errors && errors.category){ %>
-                <div>
-                    <%= errors.category.msg %>
+                <div class = "size-checkboxes">
+                    <label for = "insale"><input type = "checkbox" id = "insale" name = "insale" value = "1">En Oferta</label>
                 </div>
-                 <% }  %>
+
+                    <% if(locals.errors && errors.category){ %>
+                    <div>
+                        <%= errors.category.msg %>
+                    </div>
+                    <% }  %>
             </div>     
                 
-            <div class = "size-checkboxes">
-                <label for = "insale"><input type = "checkbox" id = "insale" name = "insale" value = "1">En Oferta</label>
-            </div>
+            
 
 
             <div class = "specs">
@@ -153,6 +164,7 @@
     </footer>
 
     <script src="/js/editProductValidation.js"></script>
+    <script src="/js/scrollup.js"></script>
 
 </body>	
 </html>

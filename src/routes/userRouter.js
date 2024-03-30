@@ -32,7 +32,15 @@ const storage = multer.diskStorage(
         filename: function(req, file, cb) {
             const userToEdit = req.userToEdit || {};
             const imageName = generateFileName(userToEdit, file.originalname);    
-            cb(null, imageName);} /*File name*/
+            cb(null, imageName);}, /*File name*/
+        fileFilter: function(req, file, cb) {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+        if (!acceptedExtensions.includes(ext)) {
+            return cb(new Error('Formato de imagen no válido. Extensiones permitidas: ' + acceptedExtensions.join(', ')));
+        }
+        cb(null, true);
+    }
     });
 const uploadFile = multer({storage}); /*Execution saved*/
 

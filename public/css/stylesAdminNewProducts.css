@@ -1,10 +1,6 @@
 /* Total */
 * 
-    {font-family: 'Rubik', sans-serif;
-    /* II. M.V.A. Corrección navbar
-    margin: 10px;
-    padding: 0;
-    FF. M.V.A. */
+    {font-family: 'Roboto', sans-serif;
     box-sizing: border-box;}
 
 body 
@@ -40,8 +36,7 @@ main
     display: flex;
     flex-direction: column;
     border: #333 1px solid;
-/*     border-radius: 10px; */
-    background-color: #ebebeb;}
+    background-color: #ebebeba3;}
 
 .name-description label
     {display: block;
@@ -56,21 +51,22 @@ main
     box-sizing: border-box;
     margin-bottom: 10px;
     border: 1px solid #888;
-    font-size: 12px;
-    /* border-radius: 10px; */
+    font-size: 13px;
     margin-left: 10px;}
 
 /* Fotos */
-.photos
-    {width: 100%;
+.photos{
+    width: 100%;
     margin-bottom: 15px;
-    background-color: #ebebeb;
+    background-color: #ebebeba3;
     padding: 15px;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-evenly;
     gap: 10%;
-   /*  border-radius: 10px; */
-    border: #333 1px solid;}
+    border: #333 1px solid;
+    align-content: flex-end;
+    flex-direction: column;
+}
 
 .photos label
     {display: block;
@@ -93,42 +89,43 @@ main
     
 
 /* Precio y stock */
-.price-stock
-    {width: 100%;
+.price-stock{
+    width: 100%;
     margin-bottom: 15px;    
-    background-color: #ebebeb;
+    background-color: #ebebeba3;
     padding: 15px;
     display: flex;
     justify-content: space-between;
-    /* border-radius: 10px; */
     border: #333 1px solid;
-    align-items: center;}
+    align-items: center;
+}
 
-.price-stock label
-    {display: block;
+.price-stock label{
+    display: block;
     margin-bottom: 5px;
-    padding: 10px;}
+    padding: 15px;
+    width: 67px;
+}
 
 .price-stock input
-    {width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #888;
-    font-size: 12px;
-   /*  border-radius: 10px; */
-    text-align-last: center;
-    text-align: center;}
+    {    width: 37%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #888;
+        font-size: 12px;
+        text-align-last: center;
+        text-align: center;}
 
 /* Categoria */
 .category
-    {width: 100%;
-    margin-bottom: 15px;
-    background-color: #ebebeb;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    /* border-radius: 10px; */
-    border: #333 1px solid;}
+    {    width: 100%;
+        margin-bottom: 15px;
+        background-color: #ebebeba3;
+        padding: 15px;
+        display: flex;
+        border: #333 1px solid;
+        align-items: center;
+        flex-wrap: wrap;}
 
 .category label
     {display: block;
@@ -160,16 +157,15 @@ main
     text-align: center;}    
 
 /* Color y talle */
-.specs
-    {width: 100%;
-    background-color: #ebebeb;
-    padding: 10px;
+.specs{
+    width: 100%;
+    background-color: #ebebeba3;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    /* border-radius: 10px; */
     border: #333 1px solid;
-    align-items: center;
-    flex-wrap: wrap;}
+    flex-direction: column;
+}
 
 .specs label
     {display: block;
@@ -206,11 +202,16 @@ main
       
 
 
- .form-label
-    {/* width: 100%; */
+.form-label
+    {width: 100%;
     padding: 10px;
-    margin-bottom: 50%;
-}   
+    }   
+
+.form-label-name
+    {width: 100%;
+    padding: 10px;
+    margin-top: 17px;
+    } 
 
 /* Tamaño de los talles */
 .size-checkboxes
@@ -225,70 +226,114 @@ main
     {margin-right: 5px;}
 
 /* Botones generales */
-.button-container
-    {display: flex;
-    justify-content: space-between;
+.button-container{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin-bottom: 15px;}
-
-/* Cancelar producto Button */
-.cancelButton
-    {padding: 10px;
-    display: block;
-    width: 40%;
-    background-color: #888;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: 900;
-    font-size: medium;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;}
-
-.cancelButton:hover
-    {background-color: #333;}
-
-/* New product Button */
-.newProductButton
-    {padding: 10px;
-    display: block;
-    width: 40%;
-    background-color: rgba(22, 198, 204, 1);
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: 900;
-    font-size: medium;
-    border-radius: 10px;
+    margin-bottom: 70px;
+    margin-top: 18px;
+    flex-wrap: wrap;
 }
 
-.newProductButton:hover
-    {background-color: rgba(17, 153, 158, 1);}
+/* Cancelar producto Button */
+.cancelButton{
+    padding: 0.5em 1.2em;
+    display: block;
+    width: 40%;
+    background: rgba(0,0,0,0);
+    color: #318aac !important;
+    border: 2px solid;
+    border-color: #318aac;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: medium;
+    text-decoration: none;
+    text-align: center;
+    margin: 7px;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.cancelButton:hover{
+    background: #318aac;
+    color: #fff !important;
+}
+
+/* New product Button */
+.newProductButton{
+    padding: 0.5em 1.2em;
+    display: block;
+    width: 40%;
+    background: rgba(0,0,0,0);
+    color: #318aac !important;
+    border: 2px solid;
+    border-color: #318aac;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: medium;
+    text-decoration: none;
+    text-align: center;
+    margin: 7px;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.newProductButton:hover{
+    background: #318aac;
+    color: #fff !important;
+}
+
+
 /* -------------------------CUANDO TENGAMOS ERRORES DE VALIDACIÓN------------------------ */
-.border-red{
-   border-color: red;
-}    
+  
 .errors {
-    color: red;
-    padding-left: 3%;
+    color: #e74134;
+    font-size: 16px;
+    list-style-type: none;
+    width: max-content;
+    text-transform: none;
+    padding: unset;
+    margin: 5px;
+    line-height: 20px;
+    font-weight: 500;
+    /* margin-left: -401px; */
+    margin-bottom: 16px;
+}
+
+.alert-warning{
+    color: #e74134;
+    font-size: 16px;
+    list-style-type: none;
+    width: max-content;
+    text-transform: none;
+    padding: unset;
+    margin: 5px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
 }
 
 /*----------Breakpoints----------*/
 /*Phones*/
 @media (max-width: 480px)
-    {}
+{
+    .errors {
+        margin-left: 12px;
+    }
+
+}
 
 /*Tablets*/
 @media (min-width:768px)
 {
-
 .form {
     width: 75vw;
 }
-
+.errors {
+    margin-left: 15px;
+}
 
 }
 /*Desktop*/
