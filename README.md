@@ -52,7 +52,7 @@ https://fonts.google.com/specimen/Roboto?query=roboto
 - [x] Sprint 5: 11/01 - 01/02
 - [x] Sprint 6: 01/02 - 27/02
 - [x] Sprint 7: 27/02 - 12/03
-- [ ] Sprint 8: 12/03 - 26/03
+- [x] Sprint 8: 12/03 - 26/03
 
 # Estructura de las bases de datos a utilizar:
 
@@ -61,5 +61,8 @@ https://fonts.google.com/specimen/Roboto?query=roboto
 - [x] pets
 - [x] services
 
+# Repositorio Dashboard:
+
+https://github.com/analiajaime/dashboard-huellitas
 
 ![alt text](image.png)
