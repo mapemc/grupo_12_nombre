@@ -6,10 +6,27 @@ const Product = require('../database/models/Product')(db.sequelize, db.Sequelize
 
 
 const mainController ={
-    index: (req, res) =>{
+    index: async (req, res) => {
         const loggedInUser = req.session.user; 
-        res.render("index.ejs", { user: loggedInUser });
+        let { erro } = req.query;
+            if (!erro) {
+            erro = '';
+        }
+        const ultimoTerminoBusqueda = erro.split(' ').pop();
+    
+        const products_index = await Product.findAll({
+            where: {
+                [Op.or]: [
+                    { name: { [Op.like]: `%${erro}%` } },
+                    { category: { [Op.like]: `%${erro}%` } },
+                    { description: { [Op.like]: `%${erro}%` } }
+                ]
+            },
+            limit: 5
+        });
+        res.render("index.ejs", { user: loggedInUser , products_index, ultimoTerminoBusqueda });
     },
+    
     enviarMensaje: (nombre, email, mensaje) =>{
         return new Promise((resolve, reject) => {
             // Aquí puedes integrar la lógica para enviar el mensaje, como enviar un correo electrónico o guardar en una base de datos
@@ -38,13 +55,17 @@ const mainController ={
                     ]
                 }
             });
-            res.render("searchResults.ejs", { products, query }); 
+    
+            if (products.length === 0) {
+                res.render("notFound.ejs", { query });
+            } else {
+                res.render("searchResults.ejs", { products, query });
+            }
         } catch (error) {
             console.error('Error al buscar productos:', error);
             res.status(500).send('Error al buscar productos');
         }
     }
-    
 };
 
 module.exports = mainController;

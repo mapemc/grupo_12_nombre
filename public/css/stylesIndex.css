@@ -1,0 +1,415 @@
+* 
+    {font-family: 'Roboto', sans-serif;}
+
+.star-products h3,
+.brands h3,
+.tarjetas h3
+    {text-align: center;
+    margin-bottom: 5%;
+    color: #1a237e;
+    font-size: x-large;
+    text-transform: uppercase;}
+
+/* Estilos para el Carrusel */
+[carrousel]
+    {display: flex;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 10px;
+    min-height: 10vh;
+    overflow: hidden;
+    &::before
+        {content: '';
+      display: block;
+      padding-bottom: 25%;}
+    [name~="carrousel"]
+        {display: none;
+      &:checked
+            {+ .slide
+                {pointer-events: auto;
+                opacity: 1;
+                .slide-content
+                    {opacity: 1;}
+                }
+            }
+        }
+    
+.slide
+    {position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.3s ease;}
+    
+.slide-content
+    {opacity: 0;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.slide-content img[src$="app.png"]
+    {width: 100%;
+    height: 100%;
+    object-fit:contain;}
+
+.slide-content img[src$=".gif"]
+    {width: 200%;
+    height: 100%;}
+
+.back, .forward
+    {display: block;
+    position: absolute;
+    top: calc(50% - 2rem);
+    height: 4rem;
+    width:  2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: .5rem;
+    border-radius: 100px;
+    box-shadow: 0 2px 0 0 rgba(black, .1);
+    transform: scale(.9);
+    transition: transform .2s;  
+      &:hover {
+        transform: scale(1);
+        background-color: #F8F8F8;
+      }
+    }
+    
+.back
+    {left: calc(0% + 1rem);}
+    
+.forward
+    {right: calc(0% + 1rem);}
+}
+
+/*animales*/
+.animals
+    {display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;}
+
+.icon-home,
+.icon-name
+    {flex: 1;
+    text-align: center;
+    margin: 5px;}
+
+.icon-home,
+.animals-name
+    {display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #34322F}
+
+.icon-home
+    {width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px;}
+
+.icon-home i
+    {font-size: 60px; 
+    display: block;
+    margin-bottom: 5px;}
+
+.icon-home:hover
+    {background-color: #16c6cc;
+    color: #F8F8F8;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.1s ease;}
+
+.animals-name
+    {display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+
+.icon-name
+    {flex: 1;
+    text-align: center;
+    margin: 5px;}
+
+.banner-index-middle
+    {margin-top: 8%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8%;}
+
+.banner-index-middle img
+    {max-width: 80%; 
+    max-height: 80%; 
+    object-fit: contain;}
+    
+
+/*productos*/
+.star-products
+    {margin-bottom: 10%;}
+    
+.row-searched
+    {display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;}
+    
+.box-searched
+    {flex: 0 0 calc(15% - 20px); 
+    margin: 3px; 
+    padding: 10px;
+    background: white;
+    transition: background-color 500ms, transform 500ms;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+
+
+.box-searched:hover
+    {background-color: #7fbcb221;
+    transform: scale(1.01);}
+
+.product-searched-img
+    {width: 100%;
+    height: auto;}
+
+.product-box_image-searched
+    {display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.product-box_data-searched
+    {display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-top: solid 1px #F8F8F8;
+    color: #34322F;}
+
+.name-product-searched, .category-product-searched
+    {color: #34322F;
+    font-size: 12px;}
+
+.price-product-searched
+    {margin-top: 16px;
+    padding: 0;
+    color: #34322F;
+    font-size: 13px;}
+
+/*tarjetas*/
+.tarjetas
+    {background-image: linear-gradient(to bottom, transparent, lightblue, transparent);
+    padding: 20px;}
+
+.tarjetas h3
+    {margin-top: 10px;
+    margin-bottom: 5px;
+    color: #34322F;}
+
+/* estilos container general*/ 
+.card p
+    {font-size: 1.1em;
+    text-align: justify;
+    color: #34322F;}
+
+/* Estilos del Contenedor de Tarjetas */
+.cards-container
+    {display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    padding: 20px;} 
+
+/* Estilos de Cada Tarjeta */
+.card
+    {display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #F8F8F8;
+    max-width: 300px;
+    width: 100%; 
+    padding: 10px;}
+
+
+/* Estilos del Contenido de la Tarjeta */
+.card-content
+    {padding: 20px;} 
+
+/* Estilos para los títulos y párrafos si es necesario */
+.card-content h2
+    {margin-top: 0;
+    font-size: 1.5em;
+    justify-content: center;
+    text-align: center;
+    color: #34322F;} 
+
+.card img
+    {width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;}
+
+.button-link
+    {display: flex;
+    justify-content: center; /* Para centrar los elementos horizontalmente */
+    align-items: flex-end; /* Para alinear los elementos en la parte inferior */
+    margin-top: auto; /* Hace que los botones se alineen en la parte inferior */}
+
+.button-link h3
+    {display: inline-block; 
+    background-color: #16c6cc; 
+    color: #F8F8F8; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none;  
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 5px; 
+    transition-duration: 0.4s;}
+    
+.button-link h3:hover
+    {background-color: #16c6cc;}
+
+/*banner bottom*/
+.banner-index-bottom
+    {margin-top: 8%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 8%;}
+
+.banner-index-bottom img
+    {max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;}
+
+.newsletter-input-index
+    {position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    left: 27%; 
+    bottom: 30%; 
+    width: 20%;}
+
+.mailbox-index
+    {border: none;
+    outline: none;
+    padding: 13px; 
+    border-radius: 5px;
+    flex-grow: 1; 
+    margin-right: 5px;}
+
+.submit-button-index
+    {border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;}
+
+    
+
+/*marcas*/
+.brands
+    {overflow: hidden;
+	width: 100%;
+	height: 100%;
+    margin-bottom: 10%;}
+
+/*----- Contenedor logos -----*/
+
+.brands-box
+    {width: 100%;
+    height: 100%;
+    margin: auto;
+    white-space: nowrap;
+    position: relative;
+    border-radius: 8px 8px 0px 0px;}
+
+/*----- Detener la animación -----*/
+
+.brands-box:hover .logos
+    {animation-play-state: paused;
+    transition: background-color 0.3s, color 0.3s, border 0.1s;}
+
+/*----- Slider logos -----*/
+
+.logos
+    {display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    animation: slide 20s linear infinite;
+    -webkit-animation: slide 20s linear infinite;
+    width: calc(200px * 10 * 2);}
+
+.logo-icon
+    {width: 200px;
+    height: 500%;
+    margin: 0 40px;}
+
+    .logo-icon img
+        {width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease;}
+
+    .logo-icon img:hover
+        {cursor: pointer;
+        transform: scale(1.5);}
+
+
+/*----- Animación en el eje X (horizontal) -----*/
+
+@keyframes slide {
+from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+to {
+    -webkit-transform: translateX(calc(-200px * 10));
+    transform: translateX(calc(-200px * 10));
+}
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .slide-inner {
+        height: calc(50vw + 3em);
+    }
+    .slide-control {
+        font-size: 8vw;
+        height: 8vw;
+        line-height: 7vw;
+        width: 8vw;
+    }
+    .slide-item img{
+        max-width: 200%;
+    }
+    .text-overlay{
+        font-size: 2em
+    }
+    .slide-circulo {
+        font-size: 7vw;
+    }
+}
+
+
+  
+  
