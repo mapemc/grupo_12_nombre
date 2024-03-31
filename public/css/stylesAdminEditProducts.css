@@ -289,12 +289,6 @@ main {
     color: #fff !important;
   }
 
-
-
-/* .cancelButton:hover
-    {background-color: #333;} */
-
-/* Apply changes Button */
 .editProductButton{
     padding: 0.5em 1.2em;
     display: block;
@@ -324,30 +318,40 @@ main {
 @media (max-width: 480px)
 {
     .errors {
-        margin-left: -144px;
+        margin-left: 12px;
     }
-
+    .alert-warning{
+        font-size: 14px;
+        margin: 7px;
+        line-height: 17px;
+        margin-bottom: 16px;
+    }
+    .errors{
+        font-size: 12px;
+        margin: 5px;
+        line-height: 13px;
+        /* margin-left: -401px; */
+        margin-bottom: 16px;
+    }
 }
 
 /*Tablets*/
 @media (min-width:768px)
 {
-.form {
-    width: 75vw;
-}
-.errors {
-    margin-left: -326px;
-}
-
+    .form {
+        width: 75vw;
+    }
+    .errors {
+        margin-left: 15px;
+    }
 }
 /*Desktop*/
 @media (min-width: 992px)
-{
-       
-.form {
-        width: 50vw;
-}  
-       
+{   
+    .form {
+            width: 50vw;
+    }  
+        
 }
 
 /* ------------------------- VALIDACIÓN------------------------ */

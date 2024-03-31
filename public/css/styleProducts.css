@@ -95,14 +95,15 @@
 }
 
 .category-product{
-    margin-bottom: 7%;
+    display: none;
+  /*   margin-bottom: 7%;
     margin-top: 5px;
     text-align: end;
     color: rgba(41, 53, 51, 1);
     padding: 15px;
     font-size: 16px;
     font-weight: lighter;
-    text-decoration: none;
+    text-decoration: none; */
 }
 
 a
@@ -154,30 +155,51 @@ a
 }
 
 .btn-admin{
-    padding: 12px 30px;
-    background-color: #16afb4;
-    color: #fff;
-    text-decoration: double;
-    border-radius: 5px;
-    border: none;
+    padding: 0.5em 1.2em;
+    display: block;
+    width: 15%;
+    background: rgba(0,0,0,0);
+    color: #318aac !important;
+    border: 2px solid;
+    border-color: #318aac;
     cursor: pointer;
-    margin-right: 41px;
-    margin-left: 28px;
-    font-weight: bold;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: medium;
+    text-decoration: none;
+    text-align: center;
+    margin: 7px;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.btn-admin:hover{
+    background: #318aac;
+    color: #fff !important;
 }
 
 .btn-nonregister{
-    padding: 10px 20px;
-    background-color: #109599d6;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
+    padding: 0.5em 1.2em;
+    display: block;
+    width: 40%;
+    background: rgba(0,0,0,0);
+    color: #318aac !important;
+    border: 2px solid;
+    border-color: #318aac;
     cursor: pointer;
-    width: fit-content;
-    font-size: 17px;
-    margin-left: 31px;
-    margin-right: 20px;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: medium;
+    text-decoration: none;
+    text-align: center;
+    margin: 7px;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.btn-nonregister:hover{
+    background: #318aac;
+    color: #fff !important;
 }
 /* VISTA INSALE */
 
@@ -259,3 +281,68 @@ a
     border: none;
     cursor: pointer;
 }
+
+/*----------Breakpoints----------*/
+/*Phones*/
+@media (max-width: 480px)
+    {
+        .text-overlay{
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 138%;
+        }
+        .text-left{
+            font-size: 13px;
+        }
+        .btn-admin {
+            width: 21%;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .category-product{
+            display: none;
+        }
+        .price-product{
+            margin-top: 1px;
+            padding: 10px;
+            font-size: 19px;
+        }
+        .name-product{
+            margin-top: -18px;
+            font-size: 121%; 
+        }
+    }
+
+/*Tablets*/
+@media (min-width: 480px) and (max-width:768px)
+    {
+        .text-overlay{
+            top: 78%;
+            left: 50%;
+            font-size: 195%;
+        }
+        .text-left{
+            font-size: 16px;
+        }
+        .btn-admin {
+            width: 15%;
+            font-weight: 700;
+        }
+        .category-product{
+            display: none;
+        }
+        .price-product{
+            margin-top: 1px;
+            padding: 10px;
+            font-size: 19px;
+        }
+        .name-product{
+            margin-top: -18px;
+            font-size: 121%; 
+        }  
+    }
+
+/*Desktop*/
+@media (min-width: 769px)
+    {}

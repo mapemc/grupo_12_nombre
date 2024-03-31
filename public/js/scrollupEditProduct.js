@@ -12,14 +12,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    var newProductButton = document.querySelector('#newProductButton');
-
-    // Agrega un evento de clic al botón
-    newProductButton.addEventListener('click', function() {
-        // Usa smooth scrolling para ir al principio de la página
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Scroll suave
-        });
-    });
 });
