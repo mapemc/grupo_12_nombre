@@ -6,10 +6,11 @@
     margin-bottom: 5px; /* Margen inferior */
     /*overflow: hidden; /* Oculta el contenido desbordado */
     /*position: fixed; /* Fija la navbar en la parte superior */
-    top: 0; /* Posición superior */
+    /* top: 0; Posición superior */
     width: 100%; /* Ancho completo */
-    height: 3.2vw /* Altura *
+    height: 3.2vw; /* Altura *
     /*z-index: 1000; /* Asegura que la navbar se mantenga en la parte superior */
+
 }
 
 .navbar nav ul {
@@ -34,6 +35,7 @@
     text-decoration: none; /* Remueve el subrayado del enlace */
 }
 
+
 .navbar nav ul li a:hover {
    
     color: #34322F; /* Color del texto al pasar el ratón */
@@ -56,8 +58,8 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1vw;}
 
-.nav-right > div
-    {margin-left: 10px;}
+/* .nav-right > div
+    {margin-left: 10px;} */
 
 .nav-right
     {display: flex;
@@ -74,24 +76,29 @@
     width: 2.3vw; 
     border-radius: 50%; 
     object-fit: cover;}
-    
-a
-    {text-decoration: none;
-    color: #F8F8F8}
-a:hover
-    {filter: drop-shadow(3px 3px 3px #FFFFFF);}
+
+a{
+    text-decoration: none;
+    color: #F8F8F8
+}
+
+a:hover{
+    filter: drop-shadow(3px 3px 3px #FFFFFF);
+    }
 
 /*Products dropdown*/
-.dropdown-products-content
-    {display: none;
+.dropdown-products-content{
+    display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 100;}
+    z-index: 100;
+    }
 
-.dropdown-products
-    {position: relative;}
+.dropdown-products{
+    position: relative;
+    }
 
 .dropdown-products:hover .dropdown-products-content
     {display: block;
@@ -116,33 +123,36 @@ a:hover
     z-index: 100;
     text-align: center;}
 
-.dropdown-services
-    {position: relative;}
+.dropdown-services{
+    position: relative;
+    }
 
-.dropdown-services:hover .dropdown-services-content
-    {display: block;}
+.dropdown-services:hover .dropdown-services-content{
+    display: block;
+    }
 
-.dropdown-services-content a
-    {color: #34322F !important;
+.dropdown-services-content a{
+    color: #34322F !important;
     padding: 100px;
     text-decoration: none;
     display: block;}
 
 .dropdown-services-content a:hover
-    {background-color: #ddd;}
+    {   background-color: #ddd;}
 
 /*Searchbar*/
-.search-box
-    {display: flex;
+.search-box{
+    display: flex;
     align-items: center;
-    margin-left: 50%;}
-
-.search-box form
-    {display: flex;
+    margin-left: 50%;
+    /* margin-left: auto;*/
+    }
+.search-box form{
+    display: flex;
     align-items: center;}
 
-.search-box input[type=text]
-    {padding: 10px;
+.search-box input[type=text]{
+    padding: 10px;
     height: 10px;
     border: none;
     border-radius: 5px;
@@ -150,8 +160,8 @@ a:hover
     text-transform: capitalize;
     font-size: 15px;}
 
-.search-box button
-    {background: none;
+.search-box button{
+    background: none;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -162,15 +172,18 @@ a:hover
 .new-product,
 .dashboard,
 .icon-logged
-    {margin-right: 20px;}
-    
-/*Usuarios dropdown*/
-.icon
-    {color: #F8F8F8;}
+    {margin-right: 10px;}
 
-.icon:hover
-    {color: #34322F;
-    cursor: pointer;}
+/*Usuarios dropdown*/
+/* Iconos */
+.icon{
+    color: #F8F8F8;
+    }
+
+.icon:hover{
+    color: #34322F;
+    cursor: pointer;
+}
 
 .dropdown-content
     {display: none;
@@ -181,11 +194,12 @@ a:hover
     z-index: 100;
     text-align: center;}
 
-.dropdown-content a
-    {color: #34322F;
+.dropdown-content a{
+    color: #34322F;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;}
+    display: block;
+}
 
 .dropdown-content a:hover
     {background-color: #ddd;}
@@ -199,3 +213,136 @@ a:hover
 /*FF*/
 
 
+/* Menu Hamburguesa */
+.menuPaty
+    {display: none;
+    color: #f9f9f9;}
+
+/*responsive*/
+/*tablet*/
+@media (min-width: 480px) and (max-width:768px){
+    .navbar
+        {height: 4vw;
+        margin-bottom: 1vw;
+        align-items: center;
+        justify-content: center;}
+
+    .navbar nav ul li.nav-text a
+        {font-size: 1.2em;}
+
+    .search-box input[type=text]
+        {font-size: 10px;
+        width: 100px;
+        height: 5px;
+        margin-left: -30%;}
+
+    .icon-logged img
+        {height: 2.5vw; 
+        width: 2.5vw; 
+        border-radius: 50%; 
+        object-fit: cover;}
+
+    .icon
+        {font-size: 10px;}
+
+    .fa.fa-search
+        {font-size: 12px;
+        margin-bottom: 50%;}
+
+    .nav-right
+        {margin: 0;}
+
+    .navbar nav ul
+        {height: 4vw;}
+
+    .logo img
+        {height: 3vw;}
+    .menuPaty
+        {display: none;}
+}
+
+/*celular*/
+@media (max-width: 480px){
+    .navbar
+        {height: 7vw;
+        margin-bottom: 1vw;
+        align-items: center;
+        justify-content: center;}
+
+    .navbar nav ul li.nav-text a
+        {display: none;}
+
+    .navbar-left nav ul li.nav-text a {
+        display: inline-block;
+    }
+    
+    .nav-middle
+        {width: 100%;}
+
+    .search-box input[type=text]
+        {font-size: 10px;
+        width: 300%; 
+        height: 1px; 
+        margin-left: -100%;}
+
+    .icon-logged img,
+    .dropdown .icon, .new-product,
+    .dashboard
+        {display: none;}
+
+    .icon
+        {font-size: 10px;
+        margin-right: 10px;}
+
+    .fa.fa-search
+        {font-size: 12px;
+        margin-bottom: 50%;}
+
+    .nav-right
+        {margin: 0;}
+
+    .navbar nav ul
+        {height: 7vw;}
+
+    .logo img
+        {height: 5vw;}
+
+    .menuPaty
+            {display: block;}
+
+        .menuPaty .dropdown-mobile {
+            display: none; /* Oculta el menú desplegable inicialmente */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        
+        .menuPaty:hover .dropdown-mobile {
+            display: block; /* Muestra el menú desplegable al hacer hover sobre menuPaty */
+        }
+        
+        .menuPaty .dropdown-mobile ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menuPaty .dropdown-mobile li {
+            padding: 12px 16px;
+        }
+        
+        .menuPaty .dropdown-mobile li a {
+            color: #34322F;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .menuPaty .dropdown-mobile li a:hover {
+            background-color: #ddd;
+        }
+        
+    .fa.fa-solid.fa-cart-shopping
+        {margin-left: -10px;}
+    }
