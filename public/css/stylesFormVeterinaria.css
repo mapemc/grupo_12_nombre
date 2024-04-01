@@ -14,27 +14,36 @@
 
 .text-overlay-veterinaria{
     text-align: center;
-    color: rgb(31 83 74);
+    color: rgb(0 0 0 / 68%);
     position: absolute;
     top: 74%;
     left: 31%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
-    font-family: 'Rubik';
+    font-family: 'Roboto';
 }
 
-.texto-contacto-veterinaria{
+.texto-contacto-veterinaria1{
     margin: 10px;
     margin-bottom: 57px;
-    background-color: rgb(17 153 158 / 10%);
-    width: 95vw;
-    padding: 26px;
-    padding-left: 72px;
-    text-align: justify;
-    font-family: rubik;
+    background-color: rgb(17 153 158 / 5%);
+   /*  width: 90vw; */
+    padding: 57px;
+    /* padding-left: 72px; */
+    text-align: center;
     line-height: 33px;
-    font-size: 17px;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    list-style: none;
+    color: #000000b3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 180px 0px 180px 0px;
+    border: 5px double #16c6cc7d;
+    flex-direction: column;
+    font-family: 'Roboto';
 }
 
 .veterinarios{
@@ -42,7 +51,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;;
+    align-items: center;
+    margin-bottom: 77px;
 }
 
 .veterinario{
@@ -54,6 +64,8 @@
     margin: 5px;
     padding: 13px;
     align-items: center;
+    font-family: 'Roboto';
+    font-size: 18px;
 }
 
 .veterinario img{
@@ -62,16 +74,16 @@
 }
 
 .veterinario p{
-    font-family: 'Rubik';
     margin: 5px;
     color: rgb(31 83 74);
+    font-family: 'Roboto';
 
 }
 
 h2{
     color: rgb(31 83 74);
-    font-family: 'Rubik';
     text-align: center;
+    font-family: 'Roboto';
 }
 
 .contenedor-form-veterinaria{
@@ -86,12 +98,14 @@ h2{
     display: flex;
     flex-direction: column;
     padding: 90px;
+    background-image: linear-gradient(to bottom, transparent, lightblue, transparent);
+    font-family: 'Roboto';
 }
 
 .estilos-labels-veterinaria{
     padding: 10px;
-    font-family: 'Rubik';
     font-size: 1.2rem;
+    font-family: 'Roboto';
 }
 
 .estilos-inputs-veterinaria{
@@ -104,17 +118,30 @@ h2{
 }
 
 .boton-veterinaria{
+    padding: 0.75em 1.25em;
     display: block;
-    width: 25vw;
-    padding: 10px;
-    border: none;
-    background: #5cb85c;
-    color: white;
-    border-radius: 4px;
+    width: 50%;
+    background: rgba(0,0,0,0);
+    color: #3089ab !important;
+    border: 2px solid;
+    border-color: #318aac;
     cursor: pointer;
-    font-size: 16px;
-    align-self: center;
-    margin-top: 15px;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    margin: 7px;
+    transition: all 1s ease;
+    position: relative;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boton-veterinaria:hover{
+    background: #318aac;
+    color: #fff !important;
 }
 
 .contenedor-texto-contacto-veterinaria{
@@ -123,16 +150,90 @@ h2{
     align-items: center;
 }
 
-.texto-contacto-veterinaria{
-    margin: 10px;
+.texto-contacto-veterinaria2{
+    margin: 12px;
     margin-bottom: 57px;
-    background-color: rgb(17 153 158 / 10%);
-    width: 95vw;
-    padding: 26px;
-    padding-left: 72px;
+    background-color: rgb(17 153 158 / 5%);
+    padding: 35px;
     text-align: center;
-    font-family: rubik;
-    line-height: 33px;
-    font-size: 17px;
-    font-size: 1.2rem;
+    line-height: 24px;
+    font-size: 1.25rem;
+    list-style: none;
+    color: #000000d1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 180px 0px 180px 0px;
+    border: 5px double #16c6cc7d;
+    flex-direction: column;
+    font-family: 'Roboto';
 }
+
+.texto-contacto-veterinaria3{
+    margin: 10px;
+    margin-bottom: 48px;
+    background-color: rgb(17 153 158 / 5%);
+    padding: 46px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 1.25rem;
+    list-style: none;
+    color: #000000b3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 180px 0px 180px 0px;
+    border: 5px double #16c6cc7d;
+    flex-direction: column;
+    font-family: 'Roboto';
+}
+
+/*----------Breakpoints----------*/
+/*Phones*/
+@media (max-width: 480px)
+    {
+        .text-overlay-veterinaria {
+            font-size: 23px;
+        }
+        .texto-contacto-veterinaria1 {
+            margin: 10px;
+            padding: 49px;
+            line-height: 25px;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        .texto-contacto-veterinaria2 {
+            margin: 11px;
+            padding: 46px;
+            line-height: 28px;
+            font-size: 1.1rem;
+        }
+        .estilos-inputs-veterinaria {
+            padding: 10px;
+            width: 52vw;
+            height: 18px;
+        }
+        .boton-veterinaria {
+            padding: 0.75em 1.25em;
+            width: 50%;
+            font-weight: 700;
+            font-size: medium;
+        }
+        .texto-contacto-veterinaria {
+            line-height: 25px;
+            font-size: 18px;
+        }
+
+    }
+
+/*Tablets*/
+@media (min-width: 480px) and (max-width:768px)
+    {}
+
+/*Desktop*/
+@media (min-width: 769px)
+    {}

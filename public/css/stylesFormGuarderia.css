@@ -12,15 +12,15 @@
     z-index: -1;
 }
 
-.text-overlay-guarderia{
+.text-overlay-guarderia {
     text-align: center;
-    color: rgb(31 83 74);
+    color: rgb(0 0 0 / 65%);
     position: absolute;
     top: 74%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
-    font-family: 'Rubik';
+    font-family: 'Roboto';
 }
 
 .contenedor-form-guarderia{
@@ -32,15 +32,17 @@
 
 .estilos-form-guarderia{
     background-color: #ebebeb;
+    color: #000000c4;
     display: flex;
     flex-direction: column;
     padding: 90px;
+    background-image: linear-gradient(to bottom, transparent, lightblue, transparent);
 }
 
 .estilos-labels-guarderia{
     padding: 10px;
-    font-family: 'Rubik';
     font-size: 1.2rem;
+    font-family: 'Roboto';
 }
 
 .estilos-inputs-guarderia{
@@ -53,39 +55,133 @@
 }
 
 .boton-guarderia{
+    padding: 0.75em 1.25em;
     display: block;
-    width: 25vw;
-    padding: 10px;
-    border: none;
-    background: #5cb85c;
-    color: white;
-    border-radius: 4px;
+    width: 50%;
+    background: rgba(0,0,0,0);
+    color: #3089ab !important;
+    border: 2px solid;
+    border-color: #318aac;
     cursor: pointer;
-    font-size: 16px;
-    align-self: center;
-    margin-top: 15px;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    margin: 7px;
+    transition: all 1s ease;
+    position: relative;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boton-guarderia:hover{
+    background: #318aac;
+    color: #fff !important;
 }
 
 .contenedor-texto-contacto-guarderia{
-    /* display: flex; */
+    display: flex;
     justify-content: space-around;
     align-items: center;
+    /* border-radius: 35px 0px 35px 0px; */
+    -moz-border-radius: 35px 0px 35px 0px;
+    /* -webkit-border-radius: 35px 0px 35px 0px; */
+    border: 5px double #16c6cc;
+}
+
+.texto-contacto-guarderia1{
+    margin: 10px;
+    margin-bottom: 57px;
+    background-color: rgb(17 153 158 / 5%);
+   /*  width: 90vw; */
+    padding: 26px;
+    /* padding-left: 72px; */
+    text-align: center;
+    line-height: 33px;
+    font-size: 1.25rem;
+    list-style: none;
+    color: #000000b3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 180px 0px 180px 0px;
+    border: 5px double #16c6cc7d;
+    flex-direction: column;
+    font-family: 'Roboto';
+
 }
 
 .texto-contacto-guarderia{
     margin: 10px;
-    margin-bottom: 57px;
+    margin-bottom: 12px;
     background-color: rgb(17 153 158 / 10%);
-    /* width: 95vw; */
+    width: 70vw;
     padding: 26px;
-    padding-left: 72px;
-    text-align: justify;
-    font-family: rubik;
+    text-align: center;
     line-height: 33px;
-    font-size: 17px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    list-style: none;
+    color: #000000d1;
+    font-family: 'Roboto';
 }
 
 .img-guarderia2{
     width: 20vw;
 }
+
+.seccion-texto-contacto{
+    display: flex;
+    justify-content: center;
+}
+
+.espacio{
+    height: 45px;
+}
+
+/*----------Breakpoints----------*/
+/*Phones*/
+@media (max-width: 480px)
+    {
+        .text-overlay-guarderia {
+            font-size: 18px;
+        }
+        .texto-contacto-guarderia1 {
+            margin: 10px;
+            margin-bottom: 22px;
+            line-height: 24px;
+            font-size: 16px;
+            border-radius: 35px 0px 35px 0px;
+            -moz-border-radius: 35px 0px 35px 0px;
+            -webkit-border-radius: 180px 0px 180px 0px;
+            border: 5px solid #16c6cc;
+            flex-direction: column;
+        }
+        .estilos-inputs-guarderia {
+            padding: 10px;
+            width: 52vw;
+            height: 18px;
+        }
+        .boton-guarderia {
+            padding: 0.75em 1.25em;
+            width: 50%;
+            font-weight: 700;
+            font-size: medium;
+        }
+        .texto-contacto-guarderia {
+            line-height: 25px;
+            font-size: 18px;
+        }
+
+    }
+
+/*Tablets*/
+@media (min-width: 480px) and (max-width:768px)
+    {}
+
+/*Desktop*/
+@media (min-width: 769px)
+    {}
