@@ -202,16 +202,87 @@ main
 
 /*----------Breakpoints----------*/
 /*Phones*/
-@media (max-width: 480px)
-    {}
+@media (max-width: 480px){
+    .title-login
+        {text-align: center;
+        display: flex;
+        justify-content: center;}
+
+    .input-boxes-login
+        {width: 90%;}
+    
+    .forgot-password-login
+        {font-size: 13px;
+        margin-bottom: 20%;
+        margin-top: -25%;
+        margin-right: -8%;}
+
+    #remember-me
+        {margin-left: 10px;}
+
+    .submit-button-box-login
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 7.5%;}
+
+    #loginButton-login
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px}
+
+    .login-down
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;}
+
+    .login-down p
+        {font-size: 12px;}
+    
+    #registerButton-login
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: 10px;
+        padding: 10px}
+
+    .divider-login, .login-right
+        {display: none;}
+}
 
 /*Tablets*/
-@media (min-width: 480px) and (max-width:768px)
-    {}
+@media (min-width: 480px) and (max-width:768px){
+    #remember-me
+        {margin-left: 40%;}
+    
+    .forgot-password-login
+        {font-size: 13px;
+        margin-bottom: 20%;
+        margin-top: -25%;
+        margin-right: -1%;}
+
+    .logo-login
+        {width: 70%;
+        height: 50%;
+        margin-left: 20%;}
+
+    #appleid-signin
+        {transform: scale(1);}
+    
+    .button-container-login
+        {margin-left: -20px;}
+
+}
 
 /*Desktop*/
-@media (min-width: 769px)
-    {}
+/* @media (min-width: 769px)
+    {} */
 
 /* //////////VALIDACIONES FRONT////// */
 
