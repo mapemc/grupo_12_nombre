@@ -174,17 +174,90 @@ input:invalid + .error-message
 
 
 /*----------Breakpoints----------*/
+
 /*Phones*/
-@media (max-width: 480px)
-    {}
+@media (max-width: 480px){
+    .title-register
+        {text-align: center;
+        display: flex;
+        justify-content: center;}
+
+    .input-boxes-register
+        {width: 90%;}
+
+    .submit-button-box-register
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 4%;}
+
+    #registerButton-register
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px}
+
+    .register-down
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;}
+
+    .register-down p
+        {font-size: 12px;}
+    
+    #loginButton-register
+        {display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        }
+
+    .divider-register, .register-right
+        {display: none;}
+}
 
 /*Tablets*/
-@media (min-width: 480px) and (max-width:768px)
-    {}
+@media (min-width: 480px) and (max-width:768px){  
+    .labelForm
+        {font-size: 10px}
 
-/*Desktop*/
-@media (min-width: 769px)
-    {}
+    .inputStyle
+        {width: 90%;}
+
+    .inputStyle::placeholder
+        {font-size: 10px;}
+    
+    .divider-register
+        {margin-left: 50%; 
+        transform: translateX(-50%); 
+        width: 1px;
+        height: 80%; 
+        position: absolute;
+        left: 0;}
+
+    .circle-register
+        {margin-left: -3%;
+        top: 200px;}
+
+    #registerButton-register
+        {width: 100%;
+        padding: 12px;
+        font-size: 10px;
+        margin-right: -6.2%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+
+    .signin-button-apple
+        {width: 200px;
+        height: 60px;}
+
+}
 
 
 /* //////////////validaciones/////////////// */
