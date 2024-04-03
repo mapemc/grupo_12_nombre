@@ -7,6 +7,9 @@ const userController = require("./controllers/userController");
 
 /////////EXPRESS//////////
 const app = express();
+///////// LLAMAR CORS /////////
+const cors = require('cors');
+app.use(cors());
 
 
 /////////////////MIDDLEWARES//////////////

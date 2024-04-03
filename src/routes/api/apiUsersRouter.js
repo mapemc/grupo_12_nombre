@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
+
 /*autenticador */
 const adminMiddleware = require('../../middlewares/adminMiddleware.js');
 const apiUsersController = require("../../controllers/api/apiUsersController.js");
 
 
-router.get("/", (req, res) => {
+router.get("/", /* adminMiddleware, */ (req, res) => {
     apiUsersController.getUsers(req, res);
 });
 /*
@@ -14,7 +15,7 @@ Página 2: /api/users?limit=10&offset=10 si existe este qrystring, entonces hay 
 Página 3: /api/users?limit=10&offset=20 pagina 2 + 1...
  */
 
-router.get("/:username", (req, res) => {
+router.get("/:username", /* adminMiddleware, */ (req, res) => {
     apiUsersController.getUserByUsername(req, res);
 });
 
