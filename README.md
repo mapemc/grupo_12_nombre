@@ -3,7 +3,7 @@
 
 > HUELLITAS. Todo para familias multiespecie.
 
-![Logo](./public/img/logoHuellitas.png)
+![Logo](./public/img/logoHuellitasMinimal.png)
 
 # Integrantes del equipo :smile::
 - **Lina Barauskas**, 41 años, de la ciudad de Santa Fe, Argentina. Psicóloga, dibujante y Clown. Actualmente, estudiante de programación en la búsqueda de nuevos horizontes. Amante de los gatos y los nuevos desafíos.
