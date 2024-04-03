@@ -5,7 +5,7 @@ const adminMiddleware = require('../../middlewares/adminMiddleware.js');
 const apiUsersController = require("../../controllers/api/apiUsersController.js");
 
 
-router.get("/", adminMiddleware, (req, res) => {
+router.get("/", (req, res) => {
     apiUsersController.getUsers(req, res);
 });
 /*
@@ -14,7 +14,7 @@ Página 2: /api/users?limit=10&offset=10 si existe este qrystring, entonces hay 
 Página 3: /api/users?limit=10&offset=20 pagina 2 + 1...
  */
 
-router.get("/:username", adminMiddleware, (req, res) => {
+router.get("/:username", (req, res) => {
     apiUsersController.getUserByUsername(req, res);
 });
 
