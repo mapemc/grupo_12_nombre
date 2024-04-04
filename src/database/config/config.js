@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     username: "root",
-    password: "2404",
+    password: null,
     database: "huellitas",
     host: "127.0.0.1",
     port: 3306,

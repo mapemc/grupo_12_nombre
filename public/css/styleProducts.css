@@ -3,6 +3,7 @@
     background-color: #ebebeb;
     padding-bottom: 15px;
     z-index: -2;
+    font-family: 'Roboto';
 }
 
 .img-catalogo{
@@ -16,12 +17,13 @@
     text-align: center;
     color: rgb(31 83 74);
     position: absolute;
-    top: 74%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 250%;
     text-decoration-style: wavy;
     font-weight: bold;
+    font-family: 'Roboto';
 }
 
 
@@ -68,6 +70,7 @@
     width: 220px;
     margin-top: 10px;
     border-top: solid 1px #ebebeb;
+    font-family: 'Roboto';
 }
 
 .price-product{
@@ -78,6 +81,7 @@
     font-weight: 500;
     color: rgba(17, 153, 158, 1);
     text-decoration: none;
+    font-family: 'Roboto';
 }
 
 .name-product{
@@ -89,6 +93,7 @@
     background-color: #7fbcb221;
     font-size: 130%;
     text-decoration: none;
+    font-family: 'Roboto';
 }
 
 .category-product{
@@ -137,7 +142,7 @@ a
 
 .text-left {
     font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto';
     color: #1f534a;
 }
 
@@ -178,7 +183,7 @@ a
 .btn-nonregister{
     padding: 0.5em 1.2em;
     display: block;
-    width: 40%;
+    width: 21%;
     background: rgba(0,0,0,0);
     color: #318aac !important;
     border: 2px solid;
@@ -215,6 +220,7 @@ a
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #9a5d59;
+    font-family: 'Roboto';
 }
 
 .btninsale{
@@ -242,6 +248,7 @@ a
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #1f534a;
+    font-family: 'Roboto';
 }
 .btnaccesories{
     padding: 10px 20px;
@@ -268,6 +275,7 @@ a
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #1f534a;
+    font-family: 'Roboto';
 }
 .btnfood{
     padding: 10px 20px;
@@ -308,6 +316,9 @@ a
         .name-product{
             margin-top: -18px;
             font-size: 121%; 
+        }
+        .btn-nonregister{
+            width: 31%;
         }
     }
 

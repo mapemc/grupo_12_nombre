@@ -2,38 +2,45 @@
 <html lang="en">
 <head>
     <%- include("./partials/head.ejs", {cssSheet:"stylesProductDetail", title:"Detalle del producto"}) %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+       .zoom {
+            padding: 30px;
+            transition: transform 0.3s ease-in-out;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            }
+
+        .zoom:hover {
+            transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            cursor: zoom-in;
+            }
+
+        .zoom img {
+            transition: transform 0.3s ease-in-out; /* Transición suave */
+        }
+
+        .zoom:hover img {
+            transform: scale(1.5); /* Escala de la imagen al 150% */
+        }
+    </style>
+
 </head>
 
 <body>
     <header>
         <%- include('partials/header.ejs') %>
     </header>
-
     
     <div class="orden">
 
         <section class="fotos-de-artículos">
                 
             <article class="caja-img-ppal">
-                    <img src= "/img/<%= product.photo %>">
+                    <img src= "/img/<%= product.photo %>"alt="Imagen Zoom" class="zoom" id="zoom">
             </article>
-
-          <!--   <div class="otras-fotos-del-articulo">
-                <ul class="caja-img-secundarias">
-                    <li class="cajita">
-                        <img src= "/img/bolsitas2.jpg">
-                    </li>
-                    <li class="cajita">
-                        <img src= "/img/bolsitas3.jpg">
-                    </li>
-                    <li class="cajita">
-                            <img src= "/img/bolsitas4.jpg">
-                    </li>
-                    <li class="cajita">
-                            <img src= "/img/bolsitas5.jpg">
-                    </li>
-                </ul>
-            </div> -->
 
         </section>
 
@@ -79,68 +86,39 @@
                     <h4 class="compra-cuotas-transferencia"><i class="fa-solid fa-money-bill-transfer"></i>20% de descuento en toda la tienda</h4>
                 </div>
             </section>
-
-           <!--  <section class="selección-colores-talles">
-                    
-                <div>
-                    <p class="colores-disponibles">Colores disponibles</p>
-                </div>
-
-                <section class="seleccion-colores">
-
-                         <input class="color red" tipe="checkbox" name="color" value="">
-                         <input class="color green" tipe="checkbox" name="color" value="">
-                         <input class="color blue" tipe="checkbox" name="color" value="">
-                    </select>
-                </section>
-
-                <div>
-                    <p class="talles-disponibles">Talles disponibles</p>
-                </div>
-
-                <section class="seleccion-talles">
-                    <input class="talle small-medium-large" tipe="checkbox" name="talle" value="S">
-                    <input class="talle small-medium-large" tipe="checkbox" name="talle" value="M">
-                    <input class="talle small-medium-large" tipe="checkbox" name="talle" value="L">
-                </section>
-
-
-            </section> -->
-            <section>
-                <div class="caja-boton-carrito">
-                    <button class="boton-carrito" type="submit">
-                        <i class="fa-solid fa-cart-shopping"></i> <span>AGREGAR AL CARRITO</span>
-                    </button>
-                </div>
-                <div class="caja-carrito">
-                    <div class="algo-contador">
-                        <div class="contador">
-                            <div class="caja-descendente"> 
-                                <span class="descendente"> - </span>
-                                </div>
-                                    <input type="text" value="1" id="cantidad" size="1">
-                                    <span class="ascendente"> + </span>
-                                </div>
-                            </div>
-                           
-                    </div>        
-                </div>
-            </section> 
-
-
-        </div>
-    </div>    
-
-      <!-- Contenido exclusivo para administradores -->
+               <!-- Contenido exclusivo para administradores -->
 
     <% if (isAdmin) { %>
+
+
+        <section class="caja-carrito-contador oculto">
+            
+            <div class="algo-contador oculto">
+                <button class="boton-carrito oculto" type="submit">
+                        <i class="fa-solid fa-cart-shopping oculto"></i> <span>AGREGAR AL CARRITO</span>
+                </button>
+            </div>
+
+            <div class="algo-contador oculto">
+                <div class="contador oculto">
+                    <div class="caja-descendente oculto"> 
+                        <span class="descendente oculto"> - </span>
+                        </div>
+                            <input type="text" value="1" id="cantidad" size="1" class="oculto">
+                            <span class="ascendente oculto"> + </span>
+                        </div>
+                    </div>
+                       
+                </div> 
+            <div>           
+        </section> 
         
         <section class="caja-editar-borrar">
                 
                 <div class="caja-boton-edit">
                     <form action="/products/edit/<%= product.id %>" method="GET">
                         <a href = "../edit/<%= product.id %>" >
-                        <button class="boton-enviar" type="submit"> 
+                        <button class="boton-editar-borrar" type="submit"> 
                             EDITAR
                         </button>
                         </a>
@@ -150,15 +128,48 @@
             
                 <div class="caja-boton-edit">
                     <form id="deleteForm" action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button class="boton-enviar" type="button" onclick="confirmarEliminar()">
+                        <button class="boton-editar-borrar" type="button" onclick="confirmarEliminar()">
                             <span>ELIMINAR</span>
                         </button>
                     </form>
                 </div>
 
             </section>
-    <% } %>         
+    <%} else {%>
+        
+        <section class="caja-carrito-contador">
+                
+            <button class="boton-carrito" type="submit">
+                    <i class="fa-solid fa-cart-shopping"></i> <span>AGREGAR AL CARRITO</span>
+            </button>
+           
+            <div class="algo-contador">
+                <div class="contador">
+                    <div class="caja-descendente"> 
+                        <span class="descendente"> - </span>
+                        </div>
+                            <input type="text" value="1" id="cantidad" size="1">
+                            <span class="ascendente"> + </span>
+                        </div>
+                    </div>
+                       
+                </div> 
+            <div>           
+        </section> 
+    <% } %>
+           
+           
+
+        </div>
+    </div>    
+
+   
+
        
+
+
+
+
     <section class="caja-descripcion">
         <div class="titulo-descripcion-producto">DESCRIPCIÓN DEL PRODUCTO</div>
         <div></div>
@@ -254,6 +265,15 @@
                 document.getElementById("deleteForm").submit();
             }
         }
+    </script>
+
+    <script>
+        const btnZoom = document.getElementById('btn-zoom');
+        const imagenZoom = document.getElementById('imagen-zoom');
+
+        btnZoom.addEventListener('click', () => {
+            imagenZoom.classList.toggle('zoom-activado');
+        });
     </script>
 
 </body>
