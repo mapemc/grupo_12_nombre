@@ -26,7 +26,8 @@
         {display: none;
       &:checked
             {+ .slide
-                {pointer-events: auto;
+                {background-color: #65cad4;
+                pointer-events: auto;
                 opacity: 1;
                 .slide-content
                     {opacity: 1;}

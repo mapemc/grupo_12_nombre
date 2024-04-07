@@ -25,7 +25,8 @@ footer
     gap: 10px;}
 
 .sections-footer
-    {flex: 1;}
+    {flex: 1;
+    margin-right: 5px;}
 
 .title-footer
     {font-weight: bold;
