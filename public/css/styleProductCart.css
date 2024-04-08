@@ -3,41 +3,72 @@ body{
     box-sizing: border-box;
     background-color: #FFFFFF;
 }
-h1{
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    display: flex;
     font-family:'Roboto', sans-serif; 
     text-align: center;
     margin: 2rem 0;
 }
-
-main{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 70px;
+h1{
+    font-size: 2vw;
 }
-.product-container{
+.view{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.product-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    overflow: initial;
+    border-radius: 20px;
+    border: 1px solid #11999E;
+    padding: 1vw 0vw;
+    margin-bottom: 1vw;
 }
 .products{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    width: 50vw;
 }
 .item{
     display: flex;
-    align-items: stretch;
-    border: 1px solid #11999E;
-    margin: 1rem;
-    width: 40em;
+    background-color: #FFFFFF;
+    width: 90%;
+    padding: 1vw;
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid #11999E;
+    height: 20%;
+    list-style: none;
+    justify-content: space-between;
+}
+.item:hover{
+    filter: drop-shadow(3px 3px 3px #11999E);
 }
 .product-visual{
     display: flex;
-    width: 10rem;
-    height: 10rem;
-    margin: 2em;
-    
+    width: 12vw;
+    height: 10vw;
+    margin: 0;
 }
+
 .product-visual img{
     object-fit: cover;
     width: 100%;
@@ -52,62 +83,72 @@ main{
     margin-inline-end: 1rem;
     flex-grow: 4;
 }
+.productName{
+    font-size: 1vw;
+    font-weight: lighter;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .product-quantity{
     display: flex;
-    width: 4em;
-    height: 1em;
-    /* background-color: transparent ; */
-    
+    width: 4vw;
+    height: 2vw;
 }
 .btn-agregate{
     border: 0px;
     border-radius: 0;
-    width: 2em;
-    background-color:#11999E ;
+    width: 30%;
+    background-color: #11999E;
     color: #FFFFFF;
-    font-weight: 999;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 1vw;
+    height: 1.5vw;
 }
 .number{
-    width: 4em;
     border: 0;
     text-align: center;
-    background-color: #576D69;
     font-weight: 999;
-    font-size: 15px;
-    color: #FFFFFF;
+    font-size: 1em;
+    height: 1.5vw;
+    width: 50%;
+
 }
 .restart-btn{
     border: 0px;
     border-radius: 0;
-    width: 2em;
-    background-color:#11999E ;
+    width: 30%;
+    background-color: #11999E;
     color: #FFFFFF;
-    font-weight: 999;  
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 1vw;
+    height: 1.5vw;
 }
 .price-info{
-    border-left:1px solid #11999E;
-    display: grid;
-    align-items: center;
+    border-left: 1px solid #11999E;
+    display: flex;
     padding: 1rem;
-    
+    flex-direction: column;
+    align-items: stretch;
 }
 .rating{
     display: flex;
-    flex-wrap: wrap;
-    box-sizing: content-box;
-    margin: 0;
     color: #11999E;
-    background-color: transparent;
+    justify-content: center;
+    width: 6vw;
+    height: 1vw;
+
 }
 .score{
-    position: relative;    
+  
     display: flex;
     flex-direction: row-reverse;
 }
 .score input{
-    position: relative;
+
     width: 1em;
     height: 1em;
     display: flex;
@@ -119,7 +160,6 @@ main{
 }
 .score input::before{
     content:'\f005' ;
-    position: absolute;
     font-family: fontAwesome;
     font-size: 1em;
     color:#111 ;
@@ -129,14 +169,15 @@ main{
 .btn-container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+    justify-content: flex-end;
+    align-items: self-end;
+    gap: 1vw;
 }
 .price{
-    font-size:2rem;;
+    font-size: 2rem;
     font-weight: 500;
     margin-inline-start: 1rem;
+    align-self: self-end;
 }
 
 .delete-item{
@@ -161,22 +202,23 @@ main{
     align-items: center;
     justify-content: center;
 }
-.cart-container{
-    width: 30em;
+.cartContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 40%;
+    border: 1px solid #11999E;
+    margin: 1.5vw;
+    border-radius: 10px;
 }
-.cart{
+.cartList{
     flex-direction: column;
     background-color: #FFFFFF;
     align-items: center;
     display: flex;
-    border: 1px solid #11999E;
-    width: 90% ;
-    margin: 1.5em;
+    height: 100%;
 }
-.title{
+.subtitle{
     font-size: 2em;
     display: flex;
     color: #111;
@@ -222,7 +264,7 @@ main{
     color: #FFFFFF;
     background-color: #111;
     width: 90%;
-    font-size: 2rem;
+    font-size: 1vw;
     font-weight: bold;
     cursor: pointer;
     padding: 0.5em;
@@ -230,6 +272,8 @@ main{
     display: block;
     text-align: center;
     border: none;
+    top: 90%;
+    position: sticky;
 }
 
 @media screen and (max-width: 768px) {

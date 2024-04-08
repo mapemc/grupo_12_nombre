@@ -13,42 +13,47 @@
         <%- include('partials/header.ejs') %>
     </header>
     <main>
-        <h1>Tu carrito de compras</h1>
-        <section class="product-container">
-            <div class="products">
-                <!-- Item 1 -->
-                <div class="item">
-                    <div class="product-visual">
+        <section class="title">
+            <h1>Tu carrito de compras</h1>
+        </section>
+        
+        <!-- LISTA PRODUCTOS -->
+        <div class="view">
+            <section class="product-container">    
+                <!-- item 1 -->
+                <ul class="item">
+                    <li class="product-visual">
                         <img src="/img/otrosProductos1.jpg" alt="Collar para perro">
-                    </div>
-                    <div class="info">
+                    </li>
+                    <li class="info">
                         <p class="productName">Collar para perro</p>
-                        
-                        <div class="product-quantity">
-                            <button class="btn-agregate">+</button>
-                            <input type="text" value="1" class="number"></input>
-                            <button class="restart-btn">-</button>
-                        </div>
-                    </div>
-                    <div class="price-info">
-                        <div class="rating">
-                            <div class="score">
+                        <span class="product-quantity">
+                                <button class="btn-agregate">+</button>
+                                <input type="text" value="1" class="number"></input>
+                                <button class="restart-btn">-</button>
+                        </span>
+                    </li>
+                    <li class="price-info">
+                    <!-- rating de estrellas -->
+                        <ul class="rating">
+                            <li class="score">
                                 <input type="radio" name="star1">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star2">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star3">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star4">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star5">
-                            </div>
-                        </div>
+                        </ul>
+                    <!-- Precio -->
                         <p class="price">$500</p>
+                    <!-- Botones fav y borrar -->
                         <span  class="btn-container">
                             <div>
                                 <button class="delete-item" type="button">
@@ -61,41 +66,42 @@
                                 </button>
                             </div>
                         </span>
-                    </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="item">
-                    <div class="product-visual">
-                        <img src="/img/otrosProductos2.jpg" alt="Arenero">
-                    </div>
-                    <div class="info-product">
-                        <p class="productName">Arenero</p>
-                        
-                        <div class="cantidad-producto">
-                            <button class="boton-sumar">+</button>
-                            <input type="text" value="1" class="cantidad-numerica"></input>
-                            <button class="boton-restar">-</button>
-                        </div>
-                    </div>
-                    <div class="price-info">
-                        <div class="rating">
-                            <div class="score">
+                    </li>
+                </ul>
+                <!-- item 2 -->
+                <ul class="item">
+                    <li class="product-visual">
+                        <img src="/img/alimentos2.jpg" alt="Snacks para perros">
+                    </li>
+                    <li class="info">
+                        <p class="productName">Snacks para perros</p>
+                        <span class="product-quantity">
+                                <button class="btn-agregate">+</button>
+                                <input type="text" value="1" class="number"></input>
+                                <button class="restart-btn">-</button>
+                        </span>
+                    </li>
+                    <li class="price-info">
+                        <!-- rating de estrellas -->
+                        <ul class="rating">
+                            <li class="score">
                                 <input type="radio" name="star1">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star2">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star3">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star4">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star5">
-                            </div>
-                        </div>
+                        </ul>
+                        <!-- Precio -->
                         <p class="price">$500</p>
+                        <!-- Botones fav y borrar -->
                         <span  class="btn-container">
                             <div>
                                 <button class="delete-item" type="button">
@@ -108,41 +114,90 @@
                                 </button>
                             </div>
                         </span>
-                    </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="item">
-                    <div class="product-visual">
-                        <img src="/img/otrosProductos3.jpg" alt="Rascador">
-                    </div>
-                    <div class="info">
-                        <p class="productName">Rascador</p>
-                        
-                        <div class="cantidad-producto">
-                            <button class="boton-sumar">+</button>
-                            <input type="text" value="1" class="cantidad-numerica"></input>
-                            <button class="boton-restar">-</button>
-                        </div>
-                    </div>
-                    <div class="price-info">
-                        <div class="rating">
-                            <div class="score">
+                    </li>
+                </ul>
+                <!-- item 3 -->
+                <ul class="item">
+                    <li class="product-visual">
+                        <img src="/img/photo_1708724523847.jpg" alt="Bolsitas para desechos con protector">
+                    </li>
+                    <li class="info">
+                        <p class="productName">Bolsitas para desechos con protector</p>
+                        <span class="product-quantity">
+                                <button class="btn-agregate">+</button>
+                                <input type="text" value="1" class="number"></input>
+                                <button class="restart-btn">-</button>
+                        </span>
+                    </li>
+                    <li class="price-info">
+                    <!-- rating de estrellas -->
+                        <ul class="rating">
+                            <li class="score">
                                 <input type="radio" name="star1">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star2">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star3">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star4">
-                            </div>
-                            <div class="score">
+                            </li>
+                            <li class="score">
                                 <input type="radio" name="star5">
+                        </ul>
+                    <!-- Precio -->
+                        <p class="price">$500</p>
+                    <!-- Botones fav y borrar -->
+                        <div  class="btn-container">
+                            <div>
+                                <button class="delete-item" type="button">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <button class="fav-item" type="button">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
                             </div>
                         </div>
+                    </li>
+                </ul>
+                <!-- item 4 -->
+                <ul class="item">
+                    <li class="product-visual">
+                        <img src="/img/photo_1712409606436.JPG" alt="Pecera">
+                    </li>
+                    <li class="info">
+                        <p class="productName">Pecera</p>
+                        <span class="product-quantity">
+                                <button class="btn-agregate">+</button>
+                                <input type="text" value="1" class="number"></input>
+                                <button class="restart-btn">-</button>
+                        </span>
+                    </li>
+                    <li class="price-info">
+                    <!-- rating de estrellas -->
+                        <ul class="rating">
+                            <li class="score">
+                                <input type="radio" name="star1">
+                            </li>
+                            <li class="score">
+                                <input type="radio" name="star2">
+                            </li>
+                            <li class="score">
+                                <input type="radio" name="star3">
+                            </li>
+                            <li class="score">
+                                <input type="radio" name="star4">
+                            </li>
+                            <li class="score">
+                                <input type="radio" name="star5">
+                        </ul>
+                    <!-- Precio -->
                         <p class="price">$500</p>
+                    <!-- Botones fav y borrar -->
                         <span  class="btn-container">
                             <div>
                                 <button class="delete-item" type="button">
@@ -155,59 +210,13 @@
                                 </button>
                             </div>
                         </span>
-                    </div>
-                </div>
-                <!-- Item 4 -->
-                <div class="item">
-                    <div class="product-visual">
-                        <img src="/img/otrosProductos4.jpg" alt="Collar para Gato">
-                    </div>
-                    <div class="info">
-                        <p class="productName">Collar para Gato</p>
-                        
-                        <div class="cantidad-producto">
-                            <button class="boton-sumar">+</button>
-                            <input type="text" value="1" class="cantidad-numerica"></input>
-                            <button class="boton-restar">-</button>
-                        </div>
-                    </div>
-                    <div class="price-info">
-                        <div class="rating">
-                            <div class="score">
-                                <input type="radio" name="star1">
-                            </div>
-                            <div class="score">
-                                <input type="radio" name="star2">
-                            </div>
-                            <div class="score">
-                                <input type="radio" name="star3">
-                            </div>
-                            <div class="score">
-                                <input type="radio" name="star4">
-                            </div>
-                            <div class="score">
-                                <input type="radio" name="star5">
-                            </div>
-                        </div>
-                        <p class="price">$500</p>
-                        <span  class="btn-container">
-                            <div>
-                                <button class="delete-item" type="button">
-                                    <i class="fa-solid fa-x"></i>
-                                </button>
-                            </div>
-                            <div>
-                                <button class="fav-item" type="button">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="cart-container">
-                <div class="cart">
-                    <div class="title">
+                    </li>
+                </ul>
+            </section>
+                <!-- LISTA CARRITO -->
+            <section class="cartContainer">
+                <div class="cartList">
+                    <div class="subtitle">
                         <p>TU CARRITO DE COMPRAS</p>
                     </div>
                     <div class="columns">
@@ -229,11 +238,11 @@
                     </div>
                     <button class="buy">FINALIZAR COMPRA</button> 
                 </div>
-            </div>
-        </section>
-        <footer>
-            <%- include('partials/footer.ejs') %>
-        </footer>
+            </section>
+        </div>
     </main>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
 </body>
 </html>
