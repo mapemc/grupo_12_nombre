@@ -175,9 +175,10 @@ h1{
 }
 .price{
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: bold;
     margin-inline-start: 1rem;
     align-self: self-end;
+    color: #11999E;
 }
 
 .delete-item{
@@ -274,6 +275,7 @@ h1{
     border: none;
     top: 90%;
     position: sticky;
+    max-width: 30vw;
 }
 
 @media screen and (max-width: 768px) {
