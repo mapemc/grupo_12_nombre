@@ -209,8 +209,9 @@ h1{
     align-items: center;
     width: 40%;
     border: 1px solid #11999E;
-    margin: 1.5vw;
+    max-width: 30vw;
     border-radius: 10px;
+    margin-bottom: 1vw;
 }
 .cartList{
     flex-direction: column;
@@ -229,7 +230,7 @@ h1{
     text-align: center;
     justify-content: center;
     border-color: 1px solid #111;
-
+    max-width: 25vw;
 }
 .columns{
     width: auto;
